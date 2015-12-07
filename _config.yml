@@ -3,8 +3,9 @@
 # 2. config.build.yml
 # 3. config.yml
 
-name: HarryWang74.github.io
-description: personal site
+name: HarryWang74
+title: Gang Wang
+description: a web designer and developer based on Sydney
 author:
   name: HarryWang74
   email: harry74323@gmail.com
@@ -35,3 +36,5 @@ markdown: kramdown
 #     coderay_css: style
 
 pygments: true
+microdata:
+  url: http://schema.org

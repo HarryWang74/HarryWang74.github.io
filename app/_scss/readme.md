@@ -10,3 +10,13 @@ The files in this directory are plain css boilerplate. Sassify as you see fit.
 
 For detailed information on configuring sass with Grunt, see the docs 
 at https://github.com/gruntjs/grunt-contrib-sass.
+
+./_scss/base
+    Use bitter as project Scaffold styles 
+    http://bitters.bourbon.io/
+
+./_scss/layouts
+    all layout styling, relative to the files in ./_layouts folder
+
+./_scss/includes
+    all snippets styling, relative to the files in ./_includes folder
