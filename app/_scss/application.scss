@@ -1,0 +1,22 @@
+@import "../_bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "../_bower_components/ionicons/scss/ionicons";
+@import "../_bower_components/neat/app/assets/stylesheets/neat";
+
+@import "base/base";
+
+section{
+    @include outer-container;
+    @include media($tinyScreen) {
+        h1{ color: orange; }
+    }
+    @include media($smallScreen) {
+        h1{ color: green; }
+    }
+    @include media($mediumScreen) {
+        h1{ color: blue; }
+    }
+    @include media($largeScreen) {
+        h1{ color: yellow; }
+    }
+}
+
