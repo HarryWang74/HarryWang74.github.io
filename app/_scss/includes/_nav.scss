@@ -1,0 +1,312 @@
+.nav-wrapper{
+    border-top: 5px solid $dark-gray;
+    border-bottom: $base-border;
+    overflow: hidden;
+ }   
+
+nav{
+    @include outer-container;
+    .content-wrapper{
+        min-height: 48px;
+        @include shift(2);
+        @include span-columns(8);
+        
+        // home page button
+        .home-btn{
+            display: inline-block;
+            @include i-round-corners(999px);
+            width: 58px;
+            height:  58px;
+            line-height:  58px;
+            max-width: 100%;
+            text-align: center;
+            vertical-align: middle;
+            background-color: $dark-gray;
+            position: absolute;
+            top: 27px;
+            @include transition(all 0.2s ease-out);
+            i{
+                font-size: 35px;
+                color: #fff;
+                line-height: 1.55;
+            }
+        }
+
+        // nav item
+        ul{
+            float: right;
+            display: inline-block;
+            @include transition(transform 0.3s ease-in-out);
+            li{
+                display: inline-block;
+                padding: 16px;
+                line-height: 1;
+                a{
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    line-height: 1;
+                    color: $dark-gray;
+                }
+            }
+        }  
+
+        // hamburger button
+        .navicon-button{
+            display:none;
+        }
+    }
+}
+
+@include media($mediumScreen){
+    nav .content-wrapper{
+        @include shift(0);
+        @include span-columns(12);
+         .home-btn{
+            left: 16px;
+        }
+    }
+}
+
+@include media($smallScreen){
+    nav .content-wrapper{
+        .home-btn{
+            width: 50px;
+            height:  50px;
+            line-height:  50px;
+            left: 20px;
+            i{
+                font-size: 30px;
+                line-height: 1.55;
+            }
+        }
+
+        ul{
+            @include transform(translateX(100%));
+            position: absolute;
+            top: 5px;
+            left: 0;
+            right: 0;
+            overflow: hidden;
+            background: $dark-gray;
+            text-align: left;
+            li {
+                padding: 15px 10px;
+            }
+        } 
+
+        .navicon-button{
+            display: inline-block;
+            position: absolute;
+            top: 5px;
+            right: 0px;
+            z-index: 10;
+            height: 48px;
+            border-left: $base-border;
+            background: $light-gray-bg;
+            padding: 0px 14px;
+            i{
+                @include transition(transform 0.3s ease-in-out);
+                font-size: 30px;
+                color: $dark-gray;
+            }
+         }
+    }
+
+    nav .content-wrapper.global-navigation--active{
+        .home-btn{
+            top: -60px;
+        }
+        ul{
+            @include transform(translateX(0%));
+            li a{
+                color: #fff;
+            }
+        }
+        .navicon-button{
+            background: none;
+            border: none;
+            i{
+                @include transform(rotate(180deg));
+                color: #fff;
+            }
+            i:before {
+                content: $ionicon-var-ios-close-empty;
+            }
+        }
+    }
+}
+/*
+nav{
+    .content-wrapper{
+        min-height: 48px;
+        
+        .home-btn{
+            display: inline-block;
+            @include i-round-corners(999px);
+            width: 50px;
+            height:  50px;
+            line-height:  50px;
+            max-width: 100%;
+            position: relative;
+            text-align: center;
+            vertical-align: middle;
+            background-color: $dark-gray;
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            @include transition(all 0.2s ease-out);
+            i{
+                font-size: 30px;
+                color: #fff;
+                line-height: 1.55;
+            }
+        }
+
+        ul{
+            display: inline-block;
+            @include transition(transform 0.3s ease-in-out);
+            @include transform(translateX(100%));
+            position: absolute;
+            top: 5px;
+            left: 0;
+            right: 0;
+            overflow: hidden;
+            background: $dark-gray;
+            text-align: left;
+            padding-left: rem(10);
+            padding-top: 0;
+            padding-bottom: 0;
+            li{
+                 display: inline-block;
+                 padding: 16px 10px;
+                 line-height: 1;
+                a{
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    color: #fff;
+                }
+            }
+        }
+
+         .navicon-button{
+            position: absolute;
+            top: 5px;
+            right: 0px;
+            z-index: 10;
+            height: 48px;
+            border-left: $base-border;
+            background: $light-gray-bg;
+            padding: 0px 14px;
+            i{
+                @include transition(transform 0.3s ease-in-out);
+                font-size: 30px;
+                color: $dark-gray;
+            }
+         }
+    }
+
+    .content-wrapper.global-navigation--active{
+        .home-btn{
+            top: -50px;
+        }
+
+        ul{
+            @include transform(translateX(0));
+        }
+        .navicon-button{
+            background: none;
+            border: none;
+            
+            i:before {
+                content: $ionicon-var-ios-close-empty;
+            }
+            i{
+                @include transform(rotate(180deg));
+                color: #fff;
+            }
+        }
+    }
+}
+
+@include media($mediumScreen){
+    nav .content-wrapper .home-btn{
+        width: 58px;
+        height:  58px;
+        line-height:  58px;
+        i{
+            font-size: 35px;
+        }
+    }
+    nav .content-wrapper ul{
+        position: relative;
+        float: right;
+        transform: translateX(0%);
+        background: #fff;
+        li{
+            padding: 10px 16px;
+            a{
+                color: $dark-gray
+            }
+        } 
+    }
+    nav .content-wrapper .navicon-button{
+        display: none;
+    }
+}
+
+// 
+nav{
+    @include outer-container;
+    .content-wrapper{
+        @include shift(2);
+        @include span-columns(8);
+        
+        ul{
+            display: inline-block;
+            float: right;
+            li{
+                display: inline-block;
+                padding: rem(16);
+                line-height: 1;
+                a{
+                    font-size: rem(16);
+                    text-transform: uppercase;
+                    color: $dark-gray;
+                }
+                a:hover{
+                    color: $action-color;
+                }
+            }
+        }
+
+        .home-btn{
+            display: inline-block;
+            @include i-round-corners(999px);
+            width: rem(58);
+            height:  rem(58);
+            line-height:  rem(58);
+            max-width: 100%;
+            position: relative;
+            text-align: center;
+            vertical-align: middle;
+            background-color: $dark-gray;
+            position: absolute;
+            top: rem(27);
+            i{
+                font-size: rem(35);
+                color: #fff;
+                line-height: 1.55;
+            }
+        }
+    }
+}
+
+@include media($mediumScreen){
+    .content-wrapper{
+        @include shift(0);
+        @include span-columns(12)
+        bac
+    }
+}
+
+*/

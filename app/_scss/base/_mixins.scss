@@ -1,0 +1,28 @@
+/*----- Corners and Borders -----*/
+@mixin i-round-corners($radius: 5px) {
+    -webkit-border-radius: $radius;// Safari
+    -moz-border-radius: $radius;// For Mozilla
+    -o-border-radius: $radius;// For Opera
+    -khtml-border-radius: $radius;// For old Safari, KHTML
+    border-radius: $radius;
+}
+
+@mixin i-round-four-corners($leftTopRadius: 5px, $rightTopRadius: 5px, $rightButtomRadius: 5px, $leftBottomRadius: 5px) {
+    -webkit-border-radius: $leftTopRadius $rightTopRadius $rightButtomRadius $leftBottomRadius;
+    -moz-border-radius: $leftTopRadius $rightTopRadius $rightButtomRadius $leftBottomRadius;
+    -o-border-radius: $leftTopRadius $rightTopRadius $rightButtomRadius $leftBottomRadius;
+    -khtml-border-radius: $leftTopRadius $rightTopRadius $rightButtomRadius $leftBottomRadius;
+    border-radius: $leftTopRadius $rightTopRadius $rightButtomRadius $leftBottomRadius;
+}
+
+@mixin i-box-shadow($top, $left, $blur, $color, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow: $top $left  $blur $color inset;
+        -moz-box-shadow:$top $left  $blur $color inset;
+        box-shadow:$top $left  $blur $color inset;
+    } @else {
+        -webkit-box-shadow: $left $top $blur $color;
+        -moz-box-shadow: $left $top $blur $color;
+        box-shadow: $left $top $blur $color;
+    }
+}

@@ -1,9 +1,9 @@
 #{$all-buttons} {
   appearance: none;
-  background-color: $action-color;
+  background-color: #fff;
   border: 0;
-  border-radius: $base-border-radius;
-  color: #fff;
+  border-radius: 0px;
+  color: $dark-gray;
   cursor: pointer;
   display: inline-block;
   font-family: $base-font-family;
@@ -19,9 +19,11 @@
   white-space: nowrap;
 
   &:hover,
-  &:focus {
-    background-color: shade($action-color, 20%);
-    color: #fff;
+  &:focus{
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
   }
 
   &:disabled {

@@ -3,20 +3,7 @@
 @import "../_bower_components/neat/app/assets/stylesheets/neat";
 
 @import "base/base";
+@import "includes/includes";
 
-section{
-    @include outer-container;
-    @include media($tinyScreen) {
-        h1{ color: orange; }
-    }
-    @include media($smallScreen) {
-        h1{ color: green; }
-    }
-    @include media($mediumScreen) {
-        h1{ color: blue; }
-    }
-    @include media($largeScreen) {
-        h1{ color: yellow; }
-    }
-}
+html, body {overflow:hidden; }
 
