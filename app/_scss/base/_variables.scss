@@ -3,7 +3,7 @@ $base-font-family: 'Roboto Slab', serif;
 $heading-font-family: $base-font-family;
 
 // Font Sizes
-$base-font-size: rem(18);
+$base-font-size: 18px;
 
 // Line height
 $base-line-height: 1.5;
@@ -12,6 +12,12 @@ $heading-line-height: 1.2;
 // spacing
 $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
+
+$spacing-large: 80px;
+$spacing-medium: 60px;
+$spacing-small: 40px;
+$spacing-very-small: 30px;
+$spacing-tiny: 20px;
 
 // Other Sizes
 $base-border-radius: 3px;
@@ -23,10 +29,11 @@ $dark-gray: #333;
 $medium-gray: #666666;
 $light-gray: #d6d6d6;
 $light-gray-bg: #f2f2f2;
+$action-color: $blue;
 
 // Font Colors
 $base-font-color: $dark-gray;
-$action-color: $blue;
+
 
 // Border
 $base-border-color: $light-gray;

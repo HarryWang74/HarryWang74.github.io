@@ -26,3 +26,8 @@
         box-shadow: $left $top $blur $color;
     }
 }
+
+@mixin define-offset($offset, $columns){
+    @include shift($offset);
+    @include span-columns($columns);
+}
