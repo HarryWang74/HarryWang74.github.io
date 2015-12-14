@@ -56,7 +56,7 @@ footer{
 
 @include media($large-screen-down){
     footer .content-wrapper .detail, footer .content-wrapper .social-icons, footer .copy-right .copy-right-wrapper .disclaimer{
-        @include define-offset(1, 9);
+        @include define-offset(1, 10);
     }
 }
 
