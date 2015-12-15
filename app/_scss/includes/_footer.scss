@@ -1,12 +1,15 @@
 footer{
     background: url("/img/japan-wave.gif");
+    margin-top: $spacing-large;
     a{
         color:#fff;
     }
     a:hover{
         color: $action-color;
     }
-    
+    h2{
+      margin-top: $spacing-large;
+    }
     .content-wrapper{
         @include outer-container;
         color: #fff;
@@ -58,7 +61,15 @@ footer{
 }
 
 @include media($small-screen){
-    footer .content-wrapper .social-icons{
-        padding-bottom: $spacing-medium;
+  footer{
+    margin-top: $spacing-medium;
+    
+    .content-wrapper .social-icons{
+      padding-bottom: $spacing-medium;
     }
+
+    h2{
+      margin-top: $spacing-medium;
+    }
+  } 
 }
