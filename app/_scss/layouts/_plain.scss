@@ -5,10 +5,10 @@ section{
 
     .copy-wrapper{
         @include define-offset(2, 8);
-
+        @include omega();
         .tag{
             font-weight: 300;
-            margin-bottom: 10px;
+            margin-bottom: 0px;
         }
 
         p{
@@ -31,9 +31,10 @@ section{
     }
 
     .large-image-wrapper{
-        @include define-offset(1, 10);
+        @include define-offset(0, 12);
         text-align: center;
         margin-top: $spacing-very-small;
+        padding: 0 $spacing-large;
     }
 
     .small-image-wrapper{
@@ -61,7 +62,10 @@ section{
             }
         }
     }
-
+    p.intro{
+        font-size: 22px;
+        font-weight: 300;
+    }
 }
 
 .has-border{
@@ -85,11 +89,13 @@ section{
         .tag{
             font-size: 16px;
         }
+        .large-image-wrapper{
+            padding: 0px $spacing-tiny;
+        }
     }
     .spacing, .bottom-line{
         @include define-offset(1, 10);
     }
-
 }
 
 @include media($small-screen){
@@ -107,6 +113,7 @@ section{
             }
         }
     }
+
     .spacing{
         @include define-offset(0, 12);
         height: $spacing-medium;
@@ -116,3 +123,7 @@ section{
     }
 }
 
+.has-bullet{
+    list-style-type: disc;
+    margin-left: 25px;
+}
