@@ -1,7 +1,7 @@
 ---
 layout: plain
-title: 12WBT <br>public site
-subheading: RedAnt Project / design / development
+title: 12WBT <br>Public Site
+subheading: RedAnt Project / development
 ---
 {% include nav.html %}
 {% include header.html %}
@@ -10,37 +10,51 @@ subheading: RedAnt Project / design / development
     <div class="copy-wrapper">
         <h2>Background</h2>
         <p>
-            12WBT is a subscription-based digital product designed to help people reach their fitness goals, such as losing weight.  Their public site features various fitness programs and nutrition plans include online shop and blog. I was part of an agile team was involved to build their public site and responsible for create landing page, micro site and eDM for various promos.  
+            12WBT is a subscription-based digital product designed to help people reach their fitness goals, such as losing weight.  Their public site features various fitness programs and nutrition plans include online shop and blog. I was part of an agile team was involved to build their public site and responsible for create landing page, micro site and eDM for various campaigns.  
         </p>
+         <div class="small-image-wrapper">
+            <img src="/img/12wbt-01.jpg">
+         </div>
     </div>
-
-    <div class="spacing has-border"></div>
+    <div class="bottom-line has-border"></div>
 </section>
 
 <section>
     <div class="copy-wrapper">
-        <h2>Modularize front-end code </h2>
-        <p>We modularized our SASS code to keep things organized and sharable.  Creating page snippets with bootstrap+ liquid, so that content editors can use them very easier. E.g.  { % include 'sign-up' % } will insert a member sign up form at any place across the site. </p>
-    </div>
+        <h2>Data Share/Exchange </h2>
+        <p>12wbt member site build on Rails Application using mySQl, the public site build on <a href="http://locomotivecms.com/" target="_blank">Locomotive</a> (a rails CMS) using <a href="https://www.mongodb.org/" target="_blank">MongoDB</a>. Sometime we need to share/exchange data between two sites.  Eg public site show case most popular recipes from member database.  Sometimes we extended locomotive engine to access the database then use liquid (locomotive templating language) to render data in html. And sometimes we need to use JavaScript interacting with JSON APIs.
 
-    <div class="spacing has-border"></div>
+        another approach is to build API.  It really depends on the data we need to handle.</p>
+        <div class="small-image-wrapper">
+            <img src="/img/12wbt-02.jpg">
+         </div>
+    </div>
+    <div class="bottom-line has-border"></div>
 </section>
 
 <section>
     <div class="copy-wrapper">
         <h2>Mico site, Landing page and eDM </h2>
         <p>I responsible for create landing page, micro site and eDM for various promos and make sure form validation works properly, valid data been sent to backend. </p>
+        <div class="small-image-wrapper">
+            <img src="/img/12wbt-03.jpg">
+        </div>
     </div>
-
-    <div class="spacing has-border"></div>
+    <div class="bottom-line has-border"></div>
 </section>
 
 <section>
     <div class="copy-wrapper">
-        <h2>Share/Exchange Data </h2>
-        <p>12wbt member site build on Rails Application using mySQl, the public site build on Locomotive (a rails CMS) using MongoDB. Sometime we need to share/exchange data between two sites.  Eg public site show case most popular recipes from member database.  Sometime we need to extend locomotive engine to use models to access the database, other approach is to build API.  It depends on what kind of data we need to handle and how to handle it.</p>
+        <h2>Modularize front-end code </h2>
+        <p>We modularized SASS code to keep things organized and sharable.  Creating page snippets with bootstrap + liquid, so that content editors can use them very easier.</p>
+        <div class="small-image-wrapper">
+            <img src="/img/12wbt-04.jpg">
+         </div>
     </div>
-
-    <div class="spacing has-border"></div>
+    <div class="bottom-line has-border"></div>
 </section>
+
+
+
+
 {% include footer.html %}
