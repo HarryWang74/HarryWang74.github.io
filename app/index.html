@@ -1,19 +1,29 @@
 ---
 layout: plain
-title: Hello
-subtitle: Thanks for stopping by
-subheading: A little about me
-intro:  <p>I am <a href="/about">gang wang</a>, a designer & front end developer living in Sydney.  Over the course of my career, I’ve worked on many successful <a href="/projects">projects</a>. Outside of work, I am a <a href="#">cat lover</a> and enjoy <a href="#">diving</a>, <a href="#">riding</a>.</p>
 ---
+<body itemscope itemtype="{{ site.microdata.url }}/WebPage">
+
 {% include nav.html %}
-{% include header.html %}
+
+<header class="home">
+    <div class="content-wrapper">
+        <h1>Hello</h1>
+        <h2>Thanks for stopping by</h2>
+        <h3>A little about me</h3>
+        <p>I am <a href="/about">gang wang</a>, a designer & front end developer living in Sydney.  Over the course of my career, I’ve worked on many successful <a href="/projects">projects</a>. Outside of work, I am a <a href="#">cat lover</a> and enjoy <a href="#">diving</a>, <a href="#">riding</a>.</p>
+    </div>
+    <div class="spacing has-border"></div>
+</header>
 
 <section>
   <div class="copy-wrapper">
-      <p class="tag">Recent project</p>
+      <p class="tag">Design / Development</p>
       <h2><a href="/projects/flu-reporter">Flu reporter</a></h2>
       <p>
-        Personal project to build a web site and mobile app to give people easy access to Google flu trend data. <a href="#">Read More</a>
+          Past few years especially in flu seasons, I used to use <a href="https://www.google.org/flutrends" target="_blank">Google FLu Trend</a> to check the flu trend in Sydney area. After Google stopped this service on September 2015, I realized the similar data still could be found on <a href="https://www.google.com/trends/">Google Trend</a>. However, on Google trend page you have to set category, country, region, time … to get result. That’s a bit annoying. 
+      </p>
+      <p>
+          So I decided to build a small application called <b>Flu Reporter</b> and share it with people who still want to use Google flu trend data.  <a href="/projects/flu-reporter">Read More</a>
       </p>
   </div>
 
@@ -72,5 +82,7 @@ intro:  <p>I am <a href="/about">gang wang</a>, a designer & front end developer
     </div>
     <div class="bottom-line has-border"></div>
 </section>
-
+ 
 {% include footer.html %}
+
+</body>

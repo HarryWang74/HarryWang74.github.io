@@ -6,6 +6,11 @@ section{
     .copy-wrapper{
         @include define-offset(2, 8);
         @include omega();
+
+        .small-block{
+            @include define-offset(2, 8);
+        }
+
         .tag{
             font-weight: 300;
             margin-bottom: 0px;
@@ -79,12 +84,17 @@ section{
     height: $spacing-large;
 }
 
-
+@include media($extra-large-screen-down){
+    section .copy-wrapper .small-block{
+       @include define-offset(1, 10);
+    }
+}
 
 @include media($large-screen-down){
     section{
         .copy-wrapper{
             @include define-offset(1, 10);
+            
         }
         .tag{
             font-size: 16px;
@@ -111,6 +121,9 @@ section{
             .left-col, .rig-col{
                 @include define-offset(0, 12);
             }
+            .small-block{
+                @include define-offset(0, 12);
+            }
         }
     }
 
@@ -132,3 +145,23 @@ section{
     list-style-type: decimal;
     margin-left: 25px;
 }
+
+.center-text{
+    text-align: center;
+}
+
+.about{
+    section{
+        .large-image-wrapper{
+            margin-top: 0px;
+        }
+        h2{
+            margin-top: 30px;
+            .large{
+                font-size: 82px;
+            }
+        } 
+    } 
+}
+
+

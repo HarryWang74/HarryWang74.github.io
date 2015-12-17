@@ -1,33 +1,49 @@
 ---
 layout: plain
-title: About me
-subtitle: Designer & developer
-intro: <p>I am Gang Wang, specialise in web front-end, hybird app development. <br>I care deeply about user experience and design.</p>
 ---
+<body itemscope itemtype="{{ site.microdata.url }}/WebPage" class="about">
+
 {% include nav.html %}
-{% include header.html %}
+
+<header>
+    <div class="content-wrapper">
+        <h1>About me</h1>
+        <h2 class="sub-heading">Designer & developer</h2>
+        <p>I am Gang Wang, specialise in web front-end, hybird app development. <br>I care deeply about user experience and design.</p>
+    </div>
+    <div class="spacing has-border"></div>
+</header>
 
 <section>
-    <div class="copy-wrapper">
-        <h2>Developer 60%</h2>
-        <p>Expert knowledge of HTML, CSS, and JavaScript </p>
-        <ul class="has-bullet">
-            <li>Prefer using CSS extension language such as <a href="http://sass-lang.com/" target="_blank">SASS</a></li>
-            <li><a href="https://angularjs.org/" target="_blank">AngularJS</a> is my favourate client-side MVC framework</li>
-            <li>Hybird App development with <a href="https://cordova.apache.org/" target="_blank">Cordova</a>, <a href="http://www.telerik.com/" target="_blank">Telerik</a> and <a href="http://ionicframework.com/" target="_blank">Ionic</a></li>
-            <li>Familiarity with <a href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a></li>
-        </ul>
+    <div class="large-image-wrapper">
+        <img src="/img/about-developer.jpg">
     </div>
+    <div class="copy-wrapper">
+        <div class="small-block">
+            <h2 class="center-text">Developer <span class="large">60%</span></h2>
+            <ul class="has-bullet">
+                <li>Expert knowledge of HTML, CSS, and JavaScript</li>
+                <li>Prefer using CSS extension language such as <a href="http://sass-lang.com/" target="_blank">SASS</a></li>
+                <li><a href="https://angularjs.org/" target="_blank">AngularJS</a> is my favourate client-side MVC framework</li>
+                <li>Hybird App development with <a href="https://cordova.apache.org/" target="_blank">Cordova</a>, <a href="http://www.telerik.com/" target="_blank">Telerik</a> and <a href="http://ionicframework.com/" target="_blank">Ionic</a></li>
+                <li>Familiarity with <a href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="spacing has-border"></div>
 </section>
 
 <section>
+     <div class="large-image-wrapper">
+        <img src="/img/about-rainbow.jpg">
+     </div>
+
     <div class="copy-wrapper">
-        <h2>Designer 40% </h2>
-        <p>I believe design is all about problem solving and simplicity is the best thing.</p>
-        <ul class="has-bullet">
+        <h2 class="center-text">Designer <span class="large">40%</span> </h2>
+        <ul class="center-text">
             <li>User Interface Design</li>
             <li>Interaction/Responsive Design</li>
-            <li>Also have experience in branding and printing design.</li>
+            <li>have experience in branding/logo design.</li>
         </ul>
     </div>
     <div class="spacing has-border"></div>
@@ -37,12 +53,12 @@ intro: <p>I am Gang Wang, specialise in web front-end, hybird app development. <
 
 <section>
     <div class="copy-wrapper">
-        <h2>Experience & Education</h2>
         <p>
             If you are curious about my work/education history, feel free to check out my <a href="https://www.linkedin.com/in/harry74323" target="_blank">LinkedIn</a> profile.
         </p>  
     </div>
-    <div class="spacing"></div>
 </section>
 
 {% include footer.html %}
+
+</body>
