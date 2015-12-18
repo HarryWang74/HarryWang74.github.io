@@ -4,7 +4,11 @@ header{
     @include shift(2);
     @include span-columns(8);
     text-align: center;
-
+    a{
+      font-weight: 300;
+      text-decoration: underline;
+      color: $dark-gray;
+    }
     h1{
       margin-bottom: 10px;
     }

@@ -1,49 +1,54 @@
 ---
 layout: plain
 title: Flu Reporter
-intro: 
+subheading: Design / Development
 ---
 {% include nav.html %}
 {% include header.html %}
 
 <section>
     <div class="copy-wrapper">
-        <h2>Project background</h2>
+        <h2>Background</h2>
         <p>
             Past few years especially in flu seasons, I used to use <a href="https://www.google.org/flutrends" target="_blank">Google FLu Trend</a> to check the flu trend in Sydney area. After Google stopped this service on September 2015, I realized the similar data still could be found on <a href="https://www.google.com/trends/">Google Trend</a>. However, on Google trend page you have to set category, country, region, time … to get result. That’s a bit annoying. 
         </p>
         <p>
             So I decided to build a small application called <b>Flu Reporter</b> and share it with people who still want to use Google flu trend data.  
         </p>
+       <div class="small-image-wrapper">
+            <img src="/img/flu-reporter-01.jpg">
+        </div>
     </div>
-
     <div class="spacing has-border"></div>
 </section>
 
 <section>
     <div class="copy-wrapper">
-        <h2>Requirements</h2>
-        <p>Identified requirement for Flu Reporter behavior at beginning</p>
-        <ol class="has-number">
-            <li>Can send various location information to Google API and read/render the response data</li>
-            <li>Can be deployed to serve and works as a website</li>
-            <li>After wrapped by CORDOVA Flu Reporter can be submitted/distributed through application stores</li>
+        <h2>Application Behavior</h2>
+        <ol class="has-bullet">
+            <li>Send location information to Google API and render response data</li>
+            <li>Can be deployed to serve and works as website</li>
+            <li>After wrapped by Cordova, application can be submitted through application stores</li>
         </ol>
+        <div class="small-image-wrapper">
+            <img src="/img/flu-reporter-02.jpg">
+        </div>       
     </div>
-
     <div class="spacing has-border"></div>
 </section>
 
 <section>
     <div class="copy-wrapper">
-        <h2>Technologies</h2>
-        <p>The technologies/frame-works used for Flu Reporter </p>
+        <h2>Build with</h2>
         <ul class="has-bullet">
-            <li>Angular single page application</li>
-            <li>Yeoman workflow, use Generator-Jekyllrb as project scaffold</li>
-            <li>Use ngCordova to adapt Cordova plugins</li>
-            <li>Wrap application by Ionic for IOS/Andriod stores release</li>
+            <li>Flu reporter is an <a href="https://angularjs.org/" target="_blank">Angular</a> single page application</li>
+            <li>Kickstart with <a href="http://yeoman.io/" target="_blank"> Yeoman workflow</a>, use <a href="https://github.com/robwierzbowski/generator-jekyllrb" target="_blank">Generator-Jekyllrb</a> as project scaffold</li>
+            <li>Use <a href="http://ngcordova.com/" target="_blank">ngCordova</a> to adapt <a href="https://cordova.apache.org/" target="_blank">Cordova</a> plugins</li>
+            <li>Wrap application by <a href="http://ionicframework.com/" target="_blank">Ionic</a> for IOS/Andriod stores release</li>
         </ul>
+        <div class="small-image-wrapper">
+            <img src="/img/flu-reporter-03.jpg">
+        </div>
     </div>
 
     <div class="spacing has-border"></div>
@@ -51,12 +56,12 @@ intro:
 
 <section>
     <div class="copy-wrapper">
-        <h2>How Flu Reporter works</h2>
-        <p>To get Google trend data, you need to send Google visualization Query with location specified ISO-3166-2 code to trend API. So Flu Reporter’s application logic is API driven and highly asynchronous. </p>
+        <h2>Work flow</h2>
+        <p>Flu Reporter’s application logic is API driven and highly asynchronous. </p>
         <ol class="has-number">
-            <li>Flu reporter uses  api.geonames.org to convert Geographic coordinate to ISO-3166-2 code</li>
-            <li>Send Visualization Query with ISO-3166-2 code to Google Trend API</li>
-            <li>As Trend API only returns data for entirely country, Flu Reporter applies logic to JSON response to find data for specific region </li>
+            <li>Use  <a href="http://www.geonames.org/" target="_blank">Geonames API</a> to convert geographic coordinate to ISO-3166-2 code</li>
+            <li>Send <a href="https://developers.google.com/chart/interactive/docs/querylanguage?hl=en" target="_blank">Visualization Query</a> to Google Trend API</li>
+            <li>Google Trend API only returns data for entirely country, need to applies logic to JSON response to find data for specific region</li>
             <li>Render data responsively</li>
         </ol>
     </div>
@@ -64,6 +69,7 @@ intro:
 </section>
 
 <section>
-    <p class="center-text">[ <a href="#">View Project</a> ]</p>
+    <p class="center-text view-project"><span>[</span>     <a href="http://www.flu-reporter.info/" target="_blank">VIEW PROJECT</a>    <span>]</span></p>
+    <p class="center-text">Next project: <a href="/projects/12wbt/">12WBT Public Site</a></p>
 </section>
 {% include footer.html %}

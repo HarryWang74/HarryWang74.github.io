@@ -46,6 +46,7 @@ section{
         padding: 40px 60px 0px 60px;
         img{
             display:block;
+            margin: 0 auto;
             // box-shadow: 0 5px 40px rgba(0,0,0,.2)
         }
     }
@@ -150,6 +151,17 @@ section{
     text-align: center;
 }
 
+.steps{
+    margin-top: $spacing-small;
+    float: left;
+    border-bottom: 1px dashed $light-gray;
+    img{
+        max-width: 60%;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
 .about{
     section{
         .large-image-wrapper{
@@ -164,4 +176,11 @@ section{
     } 
 }
 
-
+.view-project{
+    font-weight: bold;
+    font-size: 22px;
+    span{
+        display:inline-block;
+        margin: 0px 15px;
+    }
+}
