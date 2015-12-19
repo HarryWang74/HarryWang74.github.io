@@ -4,11 +4,7 @@ header{
     @include shift(2);
     @include span-columns(8);
     text-align: center;
-    a{
-      font-weight: 300;
-      text-decoration: underline;
-      color: $dark-gray;
-    }
+
     h1{
       margin-bottom: 10px;
     }
@@ -36,6 +32,16 @@ header{
   }
 }
 
+header.generic-header{
+  h1{
+    font-size: 85px;
+  }
+  a{
+    font-weight: 300;
+    text-decoration: underline;
+    color: $dark-gray;
+  }
+}
 
 @include media($medium-screen){
   header .content-wrapper{
@@ -70,9 +76,17 @@ header{
         }
 
       }    
+  }
+  header.generic-header{
+    h1{
+      font-size: 40px;
+      font-weight: bold;
+    }
+    h3{
+      line-height: 1.5;
+    }
   } 
     .spacing{
         height: 50px;
     }
-
 }
