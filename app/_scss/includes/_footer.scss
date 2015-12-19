@@ -54,6 +54,35 @@ footer{
     }
 }
 
+#to-top {
+    display: block;
+    text-align: center;
+    position: fixed;
+    right: 17px;
+    bottom: 17px;
+    color: #fff;
+    cursor: pointer;
+    @include i-round-corners(2px);
+    z-index: 10000;
+    height: 30px;
+    width: 30px;
+    background-color: rgba(0,0,0,0.5);
+    @include transition(background-color 0.1s linear);
+    i {
+        line-height: 29px!important;
+        width: 29px!important;
+        height: 29px!important;
+        font-size: 18px!important;
+        top: 0px!important;
+        left: 0px!important;
+        text-align: center!important;
+        background-color: transparent!important;    
+    }
+}
+#to-top:hover  {
+    background-color: #4bacee;
+}
+
 @include media($large-screen-down){
     footer .content-wrapper .detail, footer .content-wrapper .social-icons, footer .copy-right .copy-right-wrapper .disclaimer{
         @include define-offset(1, 10);
