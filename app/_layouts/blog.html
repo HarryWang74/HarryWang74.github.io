@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+
+<body itemscope itemtype="{{ site.microdata.url }}/WebPage">
+{% include nav.html %}
+{% include header.html %}
+
+{{ content }}
+
+{% include footer.html %}
+</body>
+
+{% include foot.html %}
+</html>

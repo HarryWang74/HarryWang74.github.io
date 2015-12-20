@@ -11,10 +11,10 @@ subheading: Design / Development
     <div class="copy-wrapper">
         <h2>Background</h2>
          <p>
-          During past few years especially in flu seasons, I used to use a <a href="https://www.google.org/flutrends" target="_blank">Google web service</a> to check the flu trend in Sydney area. After Google stopped this service on September 2015, I realized similar data still could be found on <a href="https://www.google.com/trends/">Google Trend</a>. However, you have to set category, country, region, time … to get result. That’s a bit annoying. 
+          In past a few years, I used a <a href="https://www.google.org/flutrends" target="_blank">Google web service</a> to check the flu trend in Sydney area in flu seasons. After Google stopped this service in September 2015, I realized such data would still be available on <a href="https://www.google.com/trends/">Google Trend</a>. However, you have to set up complex search criteria every time when start search which is a bit annoying.
       </p>
       <p>
-          So I decided to build a small application called <b>Flu Reporter</b> and share it with people who still want to use Google flu trend data. 
+          So I decided to build a small application that can automatically grab flu trend data from google API and share it with people who still want to use Google flu trend data. 
       </p>
        <div class="small-image-wrapper">
             <img src="/img/flu-reporter-01.jpg">
@@ -28,7 +28,7 @@ subheading: Design / Development
         <h2>Application Behavior</h2>
         <ol class="has-bullet">
             <li>Send location information to Google API and render response data</li>
-            <li>Can be deployed to serve and works as website</li>
+            <li>Can be deployed to serve and work as a website</li>
             <li>After wrapped by Cordova, application can be submitted through application stores</li>
         </ol>
         <div class="small-image-wrapper">
@@ -40,12 +40,12 @@ subheading: Design / Development
 
 <section>
     <div class="copy-wrapper">
-        <h2>Build with</h2>
+        <h2>Built with</h2>
         <ul class="has-bullet">
             <li>Flu reporter is an <a href="https://angularjs.org/" target="_blank">Angular</a> single page application</li>
             <li>Kickstart with <a href="http://yeoman.io/" target="_blank"> Yeoman workflow</a>, use <a href="https://github.com/robwierzbowski/generator-jekyllrb" target="_blank">Generator-Jekyllrb</a> as project scaffold</li>
             <li>Use <a href="http://ngcordova.com/" target="_blank">ngCordova</a> to adapt <a href="https://cordova.apache.org/" target="_blank">Cordova</a> plugins</li>
-            <li>Wrap application by <a href="http://ionicframework.com/" target="_blank">Ionic</a> for IOS/Andriod stores release</li>
+            <li>Wrapped by <a href="http://ionicframework.com/" target="_blank">Ionic</a> for IOS/Andriod stores release</li>
         </ul>
         <div class="small-image-wrapper">
             <img src="/img/flu-reporter-03.jpg">
@@ -57,12 +57,12 @@ subheading: Design / Development
 
 <section>
     <div class="copy-wrapper">
-        <h2>Work flow</h2>
+        <h2>Work Flow</h2>
         <p>Flu Reporter’s application logic is API driven and highly asynchronous. </p>
         <ol class="has-number">
             <li>Use  <a href="http://www.geonames.org/" target="_blank">Geonames API</a> to convert geographic coordinate to ISO-3166-2 code</li>
             <li>Send <a href="https://developers.google.com/chart/interactive/docs/querylanguage?hl=en" target="_blank">Visualization Query</a> to Google Trend API</li>
-            <li>Google Trend API only returns data for entirely country, need to applies logic to JSON response to find data for specific region</li>
+            <li>Apply logic to JSON response to process data for specific region</li>
             <li>Render data responsively</li>
         </ol>
     </div>

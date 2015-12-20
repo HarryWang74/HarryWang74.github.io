@@ -1,0 +1,24 @@
+.nav-blog{
+    float: left;
+    width: 100%;
+    margin-top: $spacing-tiny;
+    ul{
+        border-top: $base-border;
+        border-bottom: $base-border;
+        li{
+            display: inline-block;
+            padding: 18px;
+            a{
+                font-size: 18px;
+                font-weight: 300;
+                color: $dark-gray;
+            }
+        }
+    }
+}
+
+@include media($small-screen){
+    .nav-blog ul li{
+        display: block;
+    }
+}

@@ -1,0 +1,79 @@
+---
+layout: plain
+---
+{% include nav.html %}
+
+<header class="home">
+    <div class="content-wrapper">
+        <h1>Blog</h1>
+        <h3>Sharing things in my life</h3>
+        {% include nav-blog.html %}
+    </div>
+</header>
+
+<section itemscope itemtype="http://schema.org/Blog">
+    {% for post in paginator.posts %}
+    <article>
+        <div class="copy-wrapper">
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <ul class="blog-info">
+                <li><i class="ion-android-calendar"></i>{{ post.date | date_to_long_string }}</li>
+                <li><i class="ion-chatbox-working"></i>0</li>
+                <li><i class="ion-ios-bookmarks"></i><a href="{{ post.categories }}">{{ post.categories }}</a></li>
+            </ul>
+
+            <div itemtype="description">
+              {% if post.description %}
+                {{ post.description | markdownify }}
+              {% else %}
+                {{ post.content | truncatewords:50 | markdownify }}
+              {% endif %} 
+              <a class="right-text" href="{{ post.url }}">Read more</a>
+            </div>
+        </div>
+        <div class="spacing has-border"></div>
+    </article>
+    {% endfor %}
+    <div class="copy-wrapper">
+      <!-- Pagination links -->
+      <div class="pagination">
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+        {% else %}
+          <span class="previous">Previous</span>
+        {% endif %}
+        <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+        {% else %}
+          <span class="next ">Next</span>
+        {% endif %}
+      </div>
+    </div>
+</section>
+
+
+<!--
+<section>
+  <div class="copy-wrapper">
+    <h2><a href="#">Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate porttitor eu, consequat </a></h2>
+
+    <ul class="blog-info">
+        <li><i class="ion-android-calendar"></i>30 September 2015</li>
+        <li><i class="ion-chatbox-working"></i>0</li>
+        <li><i class="ion-ios-bookmarks"></i><a href="#">Diving</a></li>
+    </ul>
+
+    <p>
+        Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. <a href="#">Read More</a>
+    </p>
+  </div>
+
+  <div class="spacing has-border"></div>
+</section>
+-->
+
+
+
+ 
+{% include footer.html %}

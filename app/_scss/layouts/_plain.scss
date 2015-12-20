@@ -150,7 +150,11 @@ section{
 .center-text{
     text-align: center;
 }
-
+.right-text{
+    text-align: right;
+    display: inline-block;
+    width: 100%;
+}
 .steps{
     margin-top: $spacing-small;
     float: left;
@@ -160,6 +164,14 @@ section{
         display: block;
         margin: 0 auto;
     }
+}
+
+article{
+    float: left;
+    padding-top: $spacing-large;
+}
+article:first-child{
+    padding-top: 0px;
 }
 
 .about{

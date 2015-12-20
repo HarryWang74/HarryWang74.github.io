@@ -10,9 +10,11 @@ subheading: <a href="http://www.redant.com.au/" target="_blank">RedAnt project</
 <section>
     <div class="copy-wrapper">
         <h2>Background</h2>
-        <p>
-            12WBT is a subscription-based digital product designed to help people reach their fitness goals, such as losing weight.  12WBT public site features various fitness programs and nutrition plans include online shop and blog. I was part of an agile team was involved to build 12WBT public site and responsible for create landing page, micro site and eDM for various campaigns.  
+        <p>12WBT is a subscription-based digital product designed to help people reach their fitness goals, such as losing weight. 12WBT includes two sites: 
         </p>
+        <p><a href="https://www.12wbt.com/" target="_blank">Public site</a>, built on <a href="http://locomotivecms.com/" target="_blank">locomotive</a>(a rails CMS) using <a href="https://www.mongodb.org/" target="_blank">MongoDB</a>, showcases various fitness programs and nutrition plans including online shop and blog to general public.</p>
+        <p><a href="https://go.12wbt.com/login" target="_blank">Member site</a></b>, is <a href="http://rubyonrails.org/" target="_blank">rails application</a> using MySQL, provides tailored fitness programs and nutrition advice for fee-paying users, and allow users to interact with other users on real time.</p>
+        <p>I was a member of an agile team that built 12WBT public site. My key responsibilities were to create landing pages, micro sites and eDMs for various campaigns and other maintenance tasks.</p>
          <div class="small-image-wrapper">
             <img src="/img/12wbt-01.jpg">
          </div>
@@ -23,7 +25,11 @@ subheading: <a href="http://www.redant.com.au/" target="_blank">RedAnt project</
 <section>
     <div class="copy-wrapper">
         <h2>Data Share/Exchange </h2>
-        <p>12wbt member site build is Rails Application using mySQl, the public site build on <a href="http://locomotivecms.com/" target="_blank">Locomotive</a> (a rails CMS) using <a href="https://www.mongodb.org/" target="_blank">MongoDB</a>. Sometime we need to share/exchange data between two sites.  Eg public site need to grab most popular recipes from member database.  Sometimes we extended locomotive engine to access the database and use liquid (locomotive templating language) to render data in html. And sometimes we use JavaScript interacting with JSON APIs.</p>
+        <p>We needed to perform data share/exchange between member site and public site. Two technical methods used to fulfill this task:</p>
+        <ul class="has-bullet">
+            <li>Extending locomotive engine to access MySQL </li>
+            <li>Using JavaScript interacting with JSON APIs</li>
+        </ul>
         <div class="small-image-wrapper">
             <img src="/img/12wbt-02.jpg">
          </div>
@@ -33,8 +39,8 @@ subheading: <a href="http://www.redant.com.au/" target="_blank">RedAnt project</
 
 <section>
     <div class="copy-wrapper">
-        <h2>Mico site, Landing page and eDM </h2>
-        <p>I responsible for create landing page, micro site and eDM for various campaigns and make sure form validation works properly, valid data been sent to backend. </p>
+        <h2>Micro site, Landing page and eDM </h2>
+        <p>I was responsible for creating landing pages, micro sites and eDMs for various campaigns and other maintenance tasks. </p>
         <div class="small-image-wrapper">
             <img src="/img/12wbt-03.jpg">
         </div>
@@ -45,7 +51,7 @@ subheading: <a href="http://www.redant.com.au/" target="_blank">RedAnt project</
 <section>
     <div class="copy-wrapper">
         <h2>Modularize front-end code </h2>
-        <p>We modularized SASS code to keep things organized and sharable.  Creating page snippets with bootstrap + liquid, so that content editors can use them very easier.</p>
+        <p>We modularized SASS code to keep things organized and sharable. </p>
         <div class="small-image-wrapper">
             <img src="/img/12wbt-04.jpg">
          </div>
