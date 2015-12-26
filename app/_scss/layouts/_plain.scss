@@ -2,7 +2,6 @@ section{
     @include outer-container;
     padding-top: $spacing-large;
     
-
     .copy-wrapper{
         @include define-offset(2, 8);
         @include omega();
@@ -85,58 +84,6 @@ section{
     height: $spacing-large;
 }
 
-@include media($extra-large-screen-down){
-    section .copy-wrapper .small-block{
-       @include define-offset(1, 10);
-    }
-}
-
-@include media($large-screen-down){
-    section{
-        .copy-wrapper{
-            @include define-offset(1, 10);
-            
-        }
-        .tag{
-            font-size: 16px;
-        }
-        .large-image-wrapper{
-            padding: 0px $spacing-tiny;
-        }
-    }
-    .spacing, .bottom-line{
-        @include define-offset(1, 10);
-    }
-}
-
-@include media($small-screen){
-    section{
-        padding-top: $spacing-medium;
-        .copy-wrapper{
-            .blog-info li{
-                display: block;
-            }
-            .small-image-wrapper{
-                padding: 30px 20px 0px 20px;
-            }
-            .left-col, .rig-col{
-                @include define-offset(0, 12);
-            }
-            .small-block{
-                @include define-offset(0, 12);
-            }
-        }
-    }
-
-    .spacing{
-        @include define-offset(0, 12);
-        height: $spacing-medium;
-    }
-    .bottom-line{
-        @include define-offset(0, 12);
-    }
-}
-
 .has-bullet{
     list-style-type: disc;
     margin-left: 25px;
@@ -150,11 +97,13 @@ section{
 .center-text{
     text-align: center;
 }
+
 .right-text{
     text-align: right;
     display: inline-block;
     width: 100%;
 }
+
 .steps{
     margin-top: $spacing-small;
     float: left;
@@ -196,3 +145,102 @@ article:first-child{
         margin: 0px 15px;
     }
 }
+
+.calendar{
+    @include span-columns(1 of 8);
+    border-right: $base-border;
+    .month{
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 0px;
+    }
+    .date{
+        font-size: 40px;
+        font-weight: bold;
+        line-height: 1;
+        border-bottom: $base-border;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+    .year{
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+.main-content{
+    @include span-columns(7 of 8);
+    img{
+        margin-top: 30px;
+    }
+}
+
+@include media($extra-large-screen-down){
+    section .copy-wrapper .small-block{
+       @include define-offset(1, 10);
+    }
+}
+
+@include media($large-screen-down){
+    section{
+        .copy-wrapper{
+            @include define-offset(1, 10);
+            
+        }
+        .tag{
+            font-size: 16px;
+        }
+        .large-image-wrapper{
+            padding: 0px $spacing-tiny;
+        }
+    }
+    .spacing, .bottom-line{
+        @include define-offset(1, 10);
+    }
+}
+
+@include media($medium-screen){
+    .calendar{
+        @include span-columns(2 of 10);
+        border-right: none;
+    }
+    .main-content{
+        @include span-columns(8 of 10);
+    }
+}
+
+@include media($small-screen){
+    section{
+        padding-top: $spacing-medium;
+        .copy-wrapper{
+            .blog-info li{
+                display: block;
+            }
+            .small-image-wrapper{
+                padding: 30px 20px 0px 20px;
+            }
+            .left-col, .rig-col{
+                @include define-offset(0, 12);
+            }
+            .small-block{
+                @include define-offset(0, 12);
+            }
+        }
+    }
+
+    .spacing{
+        @include define-offset(0, 12);
+        height: $spacing-medium;
+    }
+    .bottom-line{
+        @include define-offset(0, 12);
+    }
+
+    .calendar{
+        @include define-offset(4, 4);
+        border-right: none;
+    }
+    .main-content{
+        @include span-columns(10 of 10);
+    }
+}
+
