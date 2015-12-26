@@ -1,7 +1,6 @@
 .nav-wrapper{
     border-top: 5px solid $dark-gray;
     border-bottom: $base-border;
-    overflow: hidden;
  }   
 
 nav{
@@ -88,15 +87,17 @@ nav{
 
         ul{
             @include transform(translateX(100%));
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            overflow: hidden;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            padding-top: 60px;
             background: url("/img/japan-wave.gif");
-            text-align: left;
+            text-align: center;
             li {
                 padding: 15px 10px;
+                display: block;
             }
         } 
 
