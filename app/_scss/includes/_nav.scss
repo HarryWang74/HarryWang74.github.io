@@ -43,12 +43,16 @@ nav{
                 display: inline-block;
                 padding: 16px;
                 line-height: 1;
+                border-bottom: 2px solid #fff;
                 a{
                     font-size: 16px;
                     text-transform: uppercase;
                     line-height: 1;
                     color: $dark-gray;
                 }
+            }
+            li.active{
+                border-bottom: 2px solid $dark-gray;
             }
         }  
 
