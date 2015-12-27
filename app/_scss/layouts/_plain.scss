@@ -77,10 +77,8 @@ section{
     border-bottom: $base-border;
 }
 
-.spacing, .bottom-line{
-    @include define-offset(2, 8);
-}
 .spacing{
+    @include define-offset(2, 8);
     height: $spacing-large;
 }
 

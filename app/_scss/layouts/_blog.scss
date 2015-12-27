@@ -5,6 +5,10 @@
             line-height: 1.75;
         }
     }
+
+    hr{
+        margin: $spacing-large 0;
+    }
 }
 
 article{
@@ -16,4 +20,15 @@ article:first-child{
     .copy-wrapper{
         margin-top: 0px;
     }
+}
+
+.highlight {
+  background: #fff;
+  border: $base-border;
+  margin-bottom: $spacing-small;
+
+  pre {
+    margin: 0;
+    padding: $base-spacing;
+  }
 }

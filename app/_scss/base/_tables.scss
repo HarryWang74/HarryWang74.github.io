@@ -1,6 +1,6 @@
 table {
   border-collapse: collapse;
-  margin: $small-spacing 0;
+  margin: $spacing-small 0;
   table-layout: fixed;
   width: 100%;
 }
@@ -21,4 +21,10 @@ tr,
 td,
 th {
   vertical-align: middle;
+}
+
+@include media($small-screen){
+  table{
+    display: none;
+  }
 }

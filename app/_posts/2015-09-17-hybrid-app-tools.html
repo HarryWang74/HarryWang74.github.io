@@ -1,0 +1,308 @@
+---
+layout: blog
+title:  A quick glance for Ionic, Telerik and Cordova 
+heading: A quick glance for Ionic, Telerik and Cordova 
+category: blog
+description: Telerik and Ionic use Cordova to wrap code into Web View. So you are just looking for a tool to wrap your code for application store release, Cordova should be sufficient.  Ionic is open source and Telerik is commercial and both of them provide CLI(Command Line Interface), UI components and backend service ... 
+---
+<p><a href="http://www.telerik.com/platform#overview" target="_blank">Telerik</a> and <a href="http://ionicframework.com/" target="_blank">Ionic</a> use <a href="https://cordova.apache.org/" target="_blank">Cordova</a> to wrap code into Web View. So you are just looking for a tool to wrap your code for application store release, Cordova should be sufficient.  Ionic is open source and Telerik is commercial and both of them provide CLI(Command Line Interface), UI components and backend service. </p>
+
+<table style="margin-bottom: 80px;">
+  <thead>
+    <tr>
+      <th>Platform</th>
+      <th>CLI</th>
+      <th>UI components</th>
+      <th>Backend service</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cordova</td>
+      <td>Yes</td>
+      <td>No</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Ionic</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Telerik</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h2>UI components</h2>
+
+<p>Ionic’s UI components built on <a href="https://angularjs.org/" target="_balnk">Angular</a> can be broken down into <a href="http://ionicframework.com/docs/components/" target="_blank">CSS part</a> and <a href="http://ionicframework.com/docs/api/" target="_blank">JS part</a>.  Telerik’s UI components is <a href="http://www.telerik.com/kendo-ui " target="_blank">Kendo UI</a> open source version called <a href="http://www.telerik.com/kendo-ui/open-source-core" target="_blank">Kendo UI core</a>.  The Kendo UI is jQuery based but can be integrated into Angular Application.</p>
+
+<hr>
+
+<h2>Backend service</h2>
+
+<p>More information about Ionic backend service can be found <a href="http://docs.ionic.io/" target="_blank">here</a>. It is still on Alpha testing and is free during this stage.</p>
+
+<p>The details about Telerik backend service can be found <a href="http://docs.telerik.com/platform/backend-services/javascript/" target="_blank">here</a>. Telerik use <a href="https://www.mongodb.org/" target="_blank">MongoDB</a> (a document-oriented database). Take this into consideration when designing app database structure.</p>
+
+<hr>
+
+<h2>Cost</h2>
+
+<p><b>Cordova</b> will remain free forever. </p>
+<p><b>Ionic</b> CLT + UI components are free. You need pay for backend service in future. </p>
+<p><b>Telerik</b> CLT, UI components and backend service cost  US$49 /month. More details are <a href="https://www.telerik.com/purchase/platform" target="_blank">here</a>. </p>
+
+<hr>
+
+<h2>MVC</h2>
+
+<p>You can use any software architectural pattern for Cordove project. Both Ionic and telerik use MVC.  Ionic is built on Angular and Telerik is jQuery based. So their MVC approaches are different. <p>
+
+<h3>Navigation</h3>
+
+<h4>Ionic / AngularJS</h4>
+
+<p>Need to set router config using  <a href="https://github.com/angular-ui/ui-router" target="_blank">ui-router</a> or <a href="https://docs.angularjs.org/api/ngRoute" target="_blank">ngRoute</a></p>
+
+{% highlight javascript %}
+angular.module('myApp').config(function($stateProvider, $urlRouterProvider) {
+    $stateProvider
+    .state('app.about', {
+        url: 'about',
+        views: {
+            'menuContent': {
+                templateUrl: 'about/about.html'
+            }
+        }
+    })
+});
+
+/*
+    click <a href="#/about">About </a>
+    load about/about.html into 
+    <ion-nav-view></ion-nav-view> or <div data-ng-view></div>
+*/
+{% endhighlight %}
+
+<h4>Telerik / kendo UI core</h4>
+
+{% highlight html %}
+
+<!-- 
+    create layout 
+-->
+
+<div data-role="layout" data-id="main">
+ <div data-role="header"></div>
+  <!-- application views will be rendered here -->
+ <div data-role="footer"></div>
+</div>
+
+<!-- 
+    create a view. 
+-->
+
+<div data-role="view" data-reload="true"></div>
+
+<!-- 
+    click  <a href="views/about.html" >About</a> 
+    load view into layout
+-->
+
+{% endhighlight %}
+
+<hr>
+
+<h3>Load data from API</h3>
+
+<h4>Ionic / AngularJS</h4>
+
+{% highlight javascript %}
+
+/*
+    create a service to use $q  load data from API 
+    then grab service data in controller. 
+*/
+
+function loadRegionsData(){
+    var url = "API URL";
+    var deferred = $q.defer();
+    
+    $http.get(url).then(
+        success, 
+        fail
+    );
+
+    function success(data) {
+        // console.log(data);
+        vm.regionData = data.data;
+        deferred.resolve();
+    }
+
+    function fail(){
+        console.log("load regions json fail");
+        deferred.reject();
+    }
+
+    return deferred.promise;
+}
+
+{% endhighlight %}
+
+<h4>Telerik / kendo UI core</h4>
+
+{% highlight javascript %}
+
+/*
+    create DataSource and attach to window
+*/
+
+window.Books = {
+     data: new kendo.data.DataSource({
+         transport: {
+             read: {
+                url: "API URL",
+                type: "get",
+                dataType: "json"
+             }
+         },
+        schema: {
+            data: "books"
+        }
+     })
+ }
+
+{% endhighlight %}
+
+<hr>
+
+<h3>Render Data</h3>
+
+<h4>Ionic / AngularJS</h4>
+
+{% highlight html %}
+
+<!--
+    use ngRepeat 
+-->
+{% raw %}
+
+<ul class="phones">
+    <li ng-repeat="phone in phones">
+      <a href="#/phones/{{phone.id}}"><img ng-src="{{phone.imageUrl}}"></a>
+      <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
+      <p>{{phone.snippet}}</p>
+    </li>
+</ul>
+
+{% endraw %}
+
+{% endhighlight %}
+
+<h4>Telerik / kendo UI core</h4>
+
+{% highlight html %}
+
+<!--
+    create list view
+    specific data-source and data-template
+-->
+
+<ul data-role="listview" data-source="Books.data" data-template="books-template"></ul>
+{% raw %}
+<script type="text/x-kendo-template" id="books-template">
+    <a href="views/detail.html?##id=#: isbn #">
+        <div class="bookImage"><img src="#: image_url #" /></div>
+        <div class="bookTitle">#: name #</div>
+        <div class="bookAuthor">#: author #</div>
+    </a>
+</script>
+{% endraw %}
+{% endhighlight %}
+
+<p>Another way for data binding in Kendo is <a href=" http://docs.telerik.com/kendo-ui/api/javascript/observable" target="_blank">kendo.observable</a>.</p>
+
+<hr>
+
+<h3>URL paramater</h3>
+
+<h4>Ionic / AngularJS</h4>
+
+{% highlight javascript %}
+{% raw %}
+
+/*
+    router configure 
+*/
+
+.state('app.showDetail', {
+    url: 'detail/:countryCode/:regionCode',
+    views: {
+        'menuContent': {
+            templateUrl: 'detail/detail.html', 
+            controller: 'detailController',
+            controllerAs: 'vm'
+        }
+    }
+});
+
+/*
+    set url
+*/
+<a ng-repeat="country in vm.countries" 
+    href="#/regions/{{ vm.continentCode}}/{{country.code}}">{{ country.name }}</a>
+
+/*
+    grab paramater in controller
+*/
+angular.module(‘myApp’).controller('detailController', detailController);
+function detailController($stateParams){
+    currentLocation.countryCode = $stateParams.countryCode;
+    currentLocation.regionCode = $stateParams.regionCode;
+}
+
+
+{% endraw %}
+{% endhighlight %}
+
+<h4>Telerik / kendo UI core</h4>
+
+{% highlight javascript %}
+
+/*
+    set url
+*/
+
+<a href="views/detail.html?##id=#: isbn #">
+
+/*
+    grab paramater
+*/
+var location = window.location.toString();
+var isbn = location.substring(location.lastIndexOf('?')+4);
+
+{% endhighlight %}
+
+<hr>
+
+<h2>Debug/testing</h2>
+
+<p><b>$ appbuilder simulate</b> launchs browser simulator for <b>Telerik project</b>.</p>
+
+<p><b>$ cordova run browser</b> launch app in browser for <b>Cordova project</b></p>
+
+<p><b>$ionic serve</b> launch app in browser for <b>Ionic project</b></p>
+
+<p>I am a Mac user. When I need to handle native simulator test, connected device test and sign up release, I use Android studio/ Xcode.</p>
+<style>
+    .highlight .err{
+        background: none;
+    }
+</style>
