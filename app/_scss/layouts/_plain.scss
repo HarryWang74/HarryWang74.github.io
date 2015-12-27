@@ -115,14 +115,6 @@ section{
     }
 }
 
-article{
-    float: left;
-    padding-top: $spacing-large;
-}
-article:first-child{
-    padding-top: 0px;
-}
-
 .about{
     section{
         .large-image-wrapper{
@@ -170,8 +162,12 @@ article:first-child{
 .main-content{
     @include span-columns(7 of 8);
     img{
-        margin-top: 30px;
+        margin-top: $spacing-very-small;
     }
+}
+
+.pagination{
+    padding-top: $spacing-small;
 }
 
 @include media($extra-large-screen-down){

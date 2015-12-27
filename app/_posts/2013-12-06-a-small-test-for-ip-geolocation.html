@@ -1,0 +1,93 @@
+---
+layout: blog
+title:  A small test for IP Geolocation accurate
+heading: A small test for IP Geolocation accurate
+category: blog
+description: In a recent project, I needed to detect user’s country then load data from API.  **W3C Geolocation API** is more accurate but it requests user’s permission. **IP Geolocation** doesn’t have permission issue but it is less accurate ... 
+---
+<section>
+<div class="copy-wrapper">
+
+<p>In a recent project, I needed to detect user’s country then load data from API. There were two technical approaches available for detecting user location: <b>detecting user IP (IP Geolocation)</b> or using <b>W3C Geolocation API</b>. </p>
+
+<p><a href="http://dev.w3.org/geo/api/spec-source.html" target="_blank">W3C Geolocation API</a> is more accurate but it requests user’s permission. Detecting IP doesn’t have permission issue but it is less accurate. I Googled around and tried to figure out how accurate it could be by using detecting IP. But I didn’t find anything useful online, so I decided to design a test. I created a testing page by using <a href="https://db-ip.com/api/" target="_blank">DBIP API</a> and <a href="https://l2.io/" target="_blank">l2 API</a> and sent it to my friends around world to test how Detect IP worked. </p>
+
+<p>The testing results were as following</p>
+
+<table class="tables">
+  <thead>
+    <tr>
+      <th>Country</th>
+      <th>Tester</th>
+      <th>Failed</th>
+      <th>Errors</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>China</td>
+      <td>10</td>
+      <td>2</td>
+      <td>Unknow IP, Location is wrong</td>
+    </tr>
+    <tr>
+      <td>USA</td>
+      <td>8</td>
+      <td>1</td>
+      <td>Unknow IP</td>
+    </tr>
+    <tr>
+      <td>Australia</td>
+      <td>4</td>
+      <td>0</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Britain</td>
+      <td>2</td>
+      <td>0</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Canda</td>
+      <td>1</td>
+      <td>0</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>New Zealand</td>
+      <td>1</td>
+      <td>0</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Japan</td>
+      <td>1</td>
+      <td>0</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>French</td>
+      <td>1</td>
+      <td>0</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>South Aferican</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Unknow IP</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>So <b>29 tester</b>, <b>4 failed</b>, error rates is <b class="large">13%</b></p>
+
+<p>* Two testers used double SIM card mobiles so l2 API failed to detect their IP. If count this in, the error rates would increase to <b class="large">19%</b></p>
+
+<p>Hope this little testing will give your a rough idea about how accurate the <b>detecting user IP (IP Geolocation)</b> is. </p>
+
+<p>This is my first blog and thanks for reading. </p>
+</div>
+</section>
+
