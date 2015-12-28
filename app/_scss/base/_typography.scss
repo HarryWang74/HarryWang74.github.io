@@ -107,3 +107,7 @@ picture {
 .large{
   font-size: 150%;
 }
+
+ol, ul{
+  margin-bottom: $spacing-small;
+}

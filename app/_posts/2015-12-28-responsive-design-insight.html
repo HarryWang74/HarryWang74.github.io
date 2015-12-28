@@ -1,0 +1,93 @@
+---
+layout: blog
+title:  My insights for responsive design
+heading: My insights for responsive design 
+category: blog
+description: Sure, starting on small screen (a single tube of content) can help you to make decisions about what is most important on the page. On other hand, big screen gives you better control for overall look and feel (styling) ... 
+---
+
+<h2>Mobile/desktop first is not a big deal</h2>
+
+<p>Currently popular tactic is to design content to fit small screen size first, and then expand the screen until a breakpoint becomes necessary.  Some designers changed their workflow to follow this theory, but quite a few experienced designers still create initial design on large screen. </p>
+<p>Sure, starting on small screen (a single tube of content) can help you to make decisions about what is most important on the page. On other hand, big screen gives you better control for overall look and feel (styling). </p>
+<p>It depends on what you are after. If you comfortable with starting on large screen, you are still on the right track. </p>
+
+
+<hr>
+
+<h2>Make design looks right in 4 types of screen</h2>
+
+<p>I believe all kinds of screens can fall into 5 categories.  Most of time, responsive design is about to find best layout for first 4 types of screens: </p>
+
+<ol class="has-number">
+  <li><b>Extra large screen</b> > 1200px</li>
+  <li><b>Large screen</b> 900px – 1200px</li>
+  <li><b>Medium screen</b> 600px – 900px</li>
+  <li><b>Small screen</b>  300px – 600px</li>
+  <li><b>Tiny screen</b> < 300px</li>
+</ol>
+
+<p>I usually start Photoshop mockup on 1500px width then review my design on large, medium and small screen to make adjustment.  Except client specified, I normally don’t take tiny screen into my consideration. </p>
+
+<hr>
+
+<h2>Responsive typography is key</h2>
+
+<p>Responsive design is not simply scaling images to fit different size of screens.  The heading and body font size also need to be adjusted. Best font size is determined by many elements: font type, layout, screen size and the distance from your eyes to screen. There is a really nice insight about <a href="Https://ia.net/know-how/responsive-typography-the-basics" target="_blank">responsive typography</a>. </p>
+
+<p>My favorite settings</p>
+
+<p><b>Above large screen</b> (large screen + extra large screen)</p>
+<ul class="has-bullet">
+  <li>H2 = 2.625 em / 42 px </li>
+  <li>Body font size = 1.125 em /18px</li>
+</ul>
+
+<p><b>Small screen </b></p>
+<ul class="has-bullet">
+  <li>H2 = 2 em /36 px</li>
+  <li>Body = 1.25 em / 20px</li>
+</ul>
+
+<hr>
+
+<h2>Some recipes</h2>
+
+<p>When implementing design to CSS and HTML, I prefer to use CSS extended language, SASS for instance.  I also use <a href="http://neat.bourbon.io/" target="_blank">NEAT</a> (a mixins library build on <a href="http://bourbon.io/" target="_blank">bourbon</a>) to make my code more readable. </p>
+
+
+<p><b>SASS/SCSS</b></p>
+ {% highlight scss %}
+
+// define screen size
+$medium-screen-min-width: 601px;
+$medium-screen-max-width: 900px;
+
+// define breakpoint
+$medium-screen: new-breakpoint(
+  min-width $medium-screen-min-width 
+  max-width $medium-screen-max-width
+);
+
+// define styling
+@include media($medium-screen){
+  // styling … 
+}
+
+{% endhighlight %}
+
+<p><b>CSS oupput</b></p>
+{% highlight css %}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  /*
+    styling …
+  */
+}
+
+{% endhighlight %}
+
+<h3>5 types of screen</h3>
+
+<p data-height="268" data-theme-id="0" data-slug-hash="YwGMEw" data-default-tab="result" data-user="HarryWang74" class='codepen'>See the Pen <a href='http://codepen.io/HarryWang74/pen/YwGMEw/'>5 types of screen</a> by Harry74323 (<a href='http://codepen.io/HarryWang74'>@HarryWang74</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>

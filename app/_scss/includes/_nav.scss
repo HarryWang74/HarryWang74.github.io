@@ -38,6 +38,7 @@ nav{
         ul{
             float: right;
             display: inline-block;
+            margin-bottom: 0px;
             @include transition(transform 0.3s ease-in-out);
             li{
                 display: inline-block;
