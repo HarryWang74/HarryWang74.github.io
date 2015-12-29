@@ -1,0 +1,24 @@
+<article>
+    <div class="copy-wrapper">
+        <div class="calendar center-text">
+            <p class="month">{{ post.date | date: "%b" }}</p>
+            <p class="date">{{ post.date | date: "%d" }}</p>
+            <p class="year">{{ post.date | date: "%Y" }}</p>
+        </div>
+
+        <div class="main-content">
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <div itemtype="description">
+                {% if post.description %}
+                    <p>{{post.description}} <a href="{{ post.url }}">Read more</a></p>
+                {% endif %} 
+            </div>
+            {% if post.feature-img %}
+                <a href="{{ post.url }}">
+                    <img src="{{ post.feature-img }}">
+                </a>
+            {% endif %} 
+        </div>
+    </div>
+    <div class="spacing has-border"></div>
+</article>

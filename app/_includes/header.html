@@ -1,7 +1,11 @@
 <header class="generic-header">
   <div class="content-wrapper">
     <h1>
-      {{ page.heading }}
+      {% if page.heading %}
+         {{ page.heading }}
+      {% else %}
+        {{ page.title }}
+      {% endif %}
     </h1>
 
     {% if page.subtitle %}

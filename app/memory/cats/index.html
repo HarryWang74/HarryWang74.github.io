@@ -1,13 +1,13 @@
 ---
 layout: plain
-category: blog
+category: memory
 ---
 {% include nav.html %}
 
 <header class="home">
     <div class="content-wrapper">
-        <h1>Blog</h1>
-        <h3>Things I've learnt in web design & development</h3>
+        <h1>Cats</h1>
+        <h3>Gelato, Momo and Ernie's life</h3>
     </div>
     <div class="spacing has-border"></div>
 </header>
@@ -15,7 +15,7 @@ category: blog
 
 <section itemscope itemtype="http://schema.org/Blog">
     {% for post in site.posts %}
-        {% if post.sub-category == 'web' %}
+        {% if post.sub-category == 'cats' %}
             {% include article-info.html %}
         {% endif %}
     {% endfor %}
