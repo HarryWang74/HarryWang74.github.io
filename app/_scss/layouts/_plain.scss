@@ -78,6 +78,10 @@ section{
     height: $spacing-large;
 }
 
+.bottom-line{
+    @include define-offset(2, 8);
+}
+
 .has-bullet{
     list-style-type: disc;
     margin-left: 25px;
