@@ -6,18 +6,19 @@ category: memory
 
 <header class="home">
     <div class="content-wrapper">
-        <h1>Memory</h1>
-        <h3>Lorem ipsum dolor sit</h3>
-        {% include nav-memory.html %}
+        <h1>Cats</h1>
+        <h3>Gelato, Momo and Ernie's life</h3>
     </div>
+    <div class="spacing has-border"></div>
 </header>
+
 
 <section itemscope itemtype="http://schema.org/Blog">
     {% for post in site.posts %}
-        {% if post.sub-category == 'diving' %}
+        {% if post.sub-category == 'riding' %}
             {% include article-info.html %}
         {% endif %}
     {% endfor %}
 </section>
- 
+
 {% include footer.html %}
