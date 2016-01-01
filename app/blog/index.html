@@ -15,9 +15,7 @@ category: blog
 
 <section itemscope itemtype="http://schema.org/Blog">
     {% for post in site.posts %}
-        {% if post.sub-category == 'web' %}
-            {% include article-info.html %}
-        {% endif %}
+        {% include article-info.html %}
     {% endfor %}
 </section>
 

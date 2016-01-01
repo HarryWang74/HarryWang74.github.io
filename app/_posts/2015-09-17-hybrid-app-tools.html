@@ -1,9 +1,7 @@
 ---
 layout: blog
 title:  A quick glance for Ionic, Telerik and Cordova 
-heading: A quick glance for Ionic, Telerik and Cordova 
 category: blog
-sub-category: web
 feature-img: /img/blogs/web/2015-09-17.jpg
 description: Telerik and Ionic use Cordova to wrap code into Web View. So you are just looking for a tool to wrap your code for application store release, Cordova should be sufficient.  Ionic is open source and Telerik is commercial and both of them provide CLI(Command Line Interface), UI components and backend service ... 
 ---
@@ -108,10 +106,12 @@ angular.module('myApp').config(function($stateProvider, $urlRouterProvider) {
 </div>
 
 <!-- 
-    create a view. 
+    create a view. save as views/about.html
 -->
 
-<div data-role="view" data-reload="true"></div>
+<div data-role="view" data-reload="true">
+  <h1>About</h1>
+</div>
 
 <!-- 
     click  <a href="views/about.html" >About</a> 
@@ -122,7 +122,7 @@ angular.module('myApp').config(function($stateProvider, $urlRouterProvider) {
 
 <hr>
 
-<h3>Load data from API</h3>
+<h3>Grab data from API</h3>
 
 <h4>Ionic / AngularJS</h4>
 
@@ -196,7 +196,7 @@ window.Books = {
 -->
 {% raw %}
 
-<ul class="phones">
+<ul>
     <li ng-repeat="phone in phones">
       <a href="#/phones/{{phone.id}}"><img ng-src="{{phone.imageUrl}}"></a>
       <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
@@ -245,7 +245,7 @@ window.Books = {
 */
 
 .state('app.showDetail', {
-    url: 'detail/:countryCode/:regionCode',
+    url: 'detail/:countryCode',
     views: {
         'menuContent': {
             templateUrl: 'detail/detail.html', 
@@ -258,8 +258,7 @@ window.Books = {
 /*
     set url
 */
-<a ng-repeat="country in vm.countries" 
-    href="#/regions/{{ vm.continentCode}}/{{country.code}}">{{ country.name }}</a>
+<a href="#/detail/{{ vm.countryCode}}">{{ vm.countryName }}</a>
 
 /*
     grab paramater in controller
@@ -267,7 +266,6 @@ window.Books = {
 angular.module(‘myApp’).controller('detailController', detailController);
 function detailController($stateParams){
     currentLocation.countryCode = $stateParams.countryCode;
-    currentLocation.regionCode = $stateParams.regionCode;
 }
 
 

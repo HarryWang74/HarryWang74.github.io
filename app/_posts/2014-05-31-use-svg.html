@@ -3,7 +3,6 @@ layout: blog
 title:  Three ways to use SVG 
 heading: Three <br>ways to use SVG 
 category: blog
-sub-category: web
 description: Due to its small file size and scalable feature, SVG in web is getting more and more popular. To embed SVG into web page as an image is the most common way.  Another way to use SVG is icon fonts. The third way is to create interactive SVG with JS and CSS ... 
 ---
 <p>Due to its small file size and scalable feature, SVG in web is getting more and more popular.  </p>
@@ -12,9 +11,9 @@ description: Due to its small file size and scalable feature, SVG in web is gett
 
 <p>Another way to use SVG is icon fonts. Check out <a href="http://www.sitepoint.com/author/mcassandro/" target="_blank">Massimo Cassandro’s</a> tutorial on <a href="http://www.sitepoint.com/create-an-icon-font-illustrator-icomoon/" target="_blank">Sitepoint.com</a>. Free online icon fonts generator such as <a href="https://icomoon.io/" target="_blank">icommon.io</a> can meet most people’s need. But if you are looking for something more powerful, <a href="https://glyphsapp.com/" target="_blank">Glyphas</a> is a more professional choice by font designers.</p>
 
-<p>Pay extra attention if you need to add new icons and re-generate your icon fonts.  Make sure <b>old icon still use the same class name</b>. Sometimes icons may get <b>a few pixels offset after re-generation</b>. Those issues will cause difficulty in adding new icons into current icon fonts.</p>
+<p>Pay extra attention if you need to add new icons and re-generate your icon fonts.  Make sure <b>old icon still use the same class name</b>. Sometimes icons may get <b>a few pixels offset after re-generation</b>.</p>
 
-<p>The third way is to create interactive SVG with JS and CSS. See my example below. Treat path as a regular DOM element. But be aware of that jQuery add/remove class doesn’t work for path. You have to use .attr() instead and .setAttribute() in Vanilla JS.</p>
+<p>The third way is to create interactive SVG with JS and CSS. See my example below. Treat path as a regular DOM element. But be aware of that jQuery add/remove class doesn’t work for path. You have to use .attr() instead or .setAttribute() in Vanilla JS.</p>
 
 <br>
 <br>

@@ -1,16 +1,14 @@
 ---
 layout: blog
 title:  My insights for responsive design
-heading: My insights for responsive design 
 category: blog
-sub-category: web
 description: Sure, starting on small screen (a single tube of content) can help you to make decisions about what is most important on the page. On other hand, big screen gives you better control for overall look and feel (styling) ... 
 feature-img: /img/blogs/web/screen-size.jpg
 ---
 
 <h2>Mobile/desktop first is not a big deal</h2>
 
-<p>Currently popular tactic is to design content to fit small screen size first, and then expand the screen until a breakpoint becomes necessary.  Some designers changed their workflow to follow this theory, but quite a few experienced designers still create initial design on large screen. </p>
+<p>The popular tactic is to design content to fit small screen size first, and then expand the screen until a breakpoint becomes necessary.  Some designers changed their workflow to follow this theory, but quite a few experienced designers still prefer to create initial design on large screen. </p>
 <p>Sure, starting on small screen (a single tube of content) can help you to make decisions about what is most important on the page. On other hand, big screen gives you better control for overall look and feel (styling). </p>
 <p>It depends on what you are after. If you comfortable with starting on large screen, you are still on the right track. </p>
 
@@ -37,7 +35,7 @@ feature-img: /img/blogs/web/screen-size.jpg
 
 <h2>Responsive typography is key</h2>
 
-<p>Responsive design is not simply scaling images to fit different size of screens.  The heading and body font size also need to be adjusted. Best font size is determined by many elements: font type, layout, screen size and the distance from your eyes to screen. There is a really nice insight about <a href="Https://ia.net/know-how/responsive-typography-the-basics" target="_blank">responsive typography</a>. </p>
+<p>Responsive design is not simply scaling/collapsing content to fit different size of screens.  The heading and body font size also need to be adjusted. Best font size is determined by many elements: font type, layout, screen size and the distance from your eyes to screen. There is a really nice insight about <a href="Https://ia.net/know-how/responsive-typography-the-basics" target="_blank">responsive typography</a>. </p>
 
 <p>My favorite settings</p>
 
@@ -91,7 +89,125 @@ $medium-screen: new-breakpoint(
 
 {% endhighlight %}
 
-<h3>5 types of screen</h3>
+<h3>Define 5 types of screen</h3>
 
-<p data-height="268" data-theme-id="0" data-slug-hash="YwGMEw" data-default-tab="result" data-user="HarryWang74" class='codepen'>See the Pen <a href='http://codepen.io/HarryWang74/pen/YwGMEw/'>5 types of screen</a> by Harry74323 (<a href='http://codepen.io/HarryWang74'>@HarryWang74</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+{% highlight scss %}
+
+@import "bourbon";
+@import "neat"; 
+
+/// screen size
+
+// tiny screen < 300
+$tiny-screen-max-width: 299px;
+
+// 300 < smallScreen < 600
+$small-screen-min-width: 300px;
+$small-screen-max-width: 600px;
+
+// 600 < mediumScreen < 900
+$medium-screen-min-width: 601px;
+$medium-screen-max-width: 900px;
+
+// 900 < largeScreen < 1200
+$large-screen-min-width: 901px;
+$large-screen-max-width: 1200px;
+
+// extraLargeScreen 1200 +
+$extra-large-screen-min-width: 1201px;
+
+
+/// breakpoints
+
+// tiny screen 
+$tiny-screen: new-breakpoint(
+  max-width $tiny-screen-max-width
+);
+
+// smallScreen
+$small-screen: new-breakpoint(
+  min-width $small-screen-min-width 
+  max-width $small-screen-max-width
+);
+
+$small-screen-up: new-breakpoint(
+  min-width $medium-screen-min-width
+); 
+
+//mediumScreen
+$medium-screen: new-breakpoint(
+  min-width $medium-screen-min-width 
+  max-width $medium-screen-max-width
+);
+$medium-screen-up: new-breakpoint(
+  min-width $large-screen-min-width
+);
+$medium-screen-down: new-breakpoint(
+  max-width $small-screen-max-width
+);
+
+//largeScreen
+$large-screen: new-breakpoint(
+  min-width $large-screen-min-width 
+  max-width $large-screen-max-width
+);
+$large-screen-down: new-breakpoint(
+  max-width $medium-screen-max-width
+);
+
+//extraLargeScreen
+$extra-large-screen: new-breakpoint(
+  min-width $extra-large-screen-min-width
+);
+$extra-large-screen-down: new-breakpoint(
+  max-width $large-screen-max-width
+);
+
+
+/// styling
+
+@include media($tiny-screen){ 
+
+}
+@include media($small-screen){
+
+}
+
+// medium + large + extra large
+@include media($small-screen-up){
+
+}
+
+@include media($medium-screen){
+
+}
+
+// large + extra large
+@include media($medium-screen-up){
+
+}
+
+// tiny + small
+@include media($medium-screen-down){
+
+}
+
+@include media($large-screen){
+
+}
+
+// medium + small + tiny
+@include media($large-screen-down){
+
+}
+
+@include media($extra-large-screen){
+
+}
+
+// large + medium + small + tiny
+@include media($extra-large-screen-down){
+
+}
+
+{% endhighlight %}
