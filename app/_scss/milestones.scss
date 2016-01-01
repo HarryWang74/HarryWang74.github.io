@@ -1,0 +1,78 @@
+@import "base/variables";
+@import "base/mixins";
+
+.home-btn{
+    display: inline-block;
+    margin: 20px;
+    @include i-round-corners(999px);     
+    width: 58px;
+    height:  58px;
+    line-height:  58px;
+    max-width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #333;
+    i {
+    font-size: 35px;
+    color: #fff;
+    line-height: 1.55;
+    }
+}
+
+body{
+    background:#fff;
+    color:#333;
+    font-family:'Roboto Slab', 
+    serif; padding-top: 60px;
+}
+a{color:#333}
+h1,h2,h3,h4,h5,h6 {font-weight:700; font-family:'Roboto Slab', serif;}
+
+a:hover,a:focus {color:#019dd4;text-decoration:none}
+.navbar .glyphicon {margin:20px 0 0 10px;padding:0;font-size:20px;border:2px solid #ddd;-webkit-border-radius:100px;-moz-border-radius:100px;border-radius:100px;height:50px;width:50px;text-align:center;line-height:40px}
+.navbar a {color:#ddd}
+header {margin-bottom:30px}
+.border-top {border-top:3px solid #eee}
+hr.border-top {width:20%;margin:2em auto}
+
+.list-unstyled li {
+    border-bottom:1px solid #eee;
+    padding:15px 0}
+.list-unstyled li:hover p {color:#333}
+.list-unstyled li:last-child {border:0}
+.list-unstyled li .icon {margin:0 5px 0 0;top:5px; font-size:30px}
+.list-unstyled li :hover .start-icon {color: $blue}
+.list-unstyled li h4 {margin:0}
+.list-unstyled li p {color:#999}
+.list-unstyled a {display:block}
+.list-unstyled a h2 {margin-top:0}
+.list-unstyled a h2 em {font-style:normal;color:#999;font-weight:100}
+
+
+
+a.homepage-detail {display:block;position:absolute;width:1316px}
+a.homepage-detail:hover {}
+.design {text-align:center;padding:60px 30px;background:#F8F6F9}
+.design .screen {-moz-box-shadow:0 0 10px 6px #ccc;-webkit-box-shadow:0 0 10px 6px #ccc;box-shadow:0 0 10px 2px #ccc}
+.description {padding:50px 0;margin-bottom:50px}
+.description h1 {font-size:50px;margin:0 0 20px 0;line-height:1}
+.description h3 {font-size:30px;margin:0;font-weight:300}
+.caption {font-size:30px;padding:30px 0;margin-bottom:50px;font-weight:300}
+.caption ul {text-align:left;width:50%;margin:0 auto}
+.caption ul li {font-style:italic}
+.caption .glyphicon {font-size:60px}
+.col-lg-3 h4 {font-weight:100;color:#999}
+
+.start-icon{
+    margin:0 20px;
+    color:#ddd;
+}
+
+.navbar-fixed-top{
+    border-bottom: none;
+}
+
+h1{
+    font-size: 85px;
+    margin: 60px 0px;
+}
