@@ -1,10 +1,10 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=description content="Sure, starting on small screen (a single tube of content) can help you to make decisions about what is most important on the page. On other hand, big screen gives you better control for overall look and feel (styling) ..."><title>My insights for responsive design | Gang Wang</title><link rel=canonical href=/blog/2015/12/28/responsive-design-insight.html><link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel=stylesheet type=text/css><link rel=stylesheet href=/css/vendor.306b.css><link rel=stylesheet href=/css/application.7e6f.css><!-- GA --><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=description content="Sure, starting on small screen (a single tube of content) can help you to make decisions about what is most important on the page. On other hand, big screen gives you better control for overall look and feel (styling) ..."><title>My insights for responsive design | Gang Wang</title><link rel=canonical href=/blog/2015/12/28/responsive-design-insight.html><link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel=stylesheet type=text/css><link rel=stylesheet href=/css/vendor.dd59.css><link rel=stylesheet href=/css/application.7e6f.css><!-- GA --><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
         ga('create', 'UA-35731179-1', 'auto');
-        ga('send', 'pageview');</script></head><body class=blog itemscope itemtype=http://schema.org/WebPage><div class=nav-wrapper><nav><div class=content-wrapper><button id=navicon-button class=navicon-button><i class=ion-ios-more></i></button><div class=transform-mask><ul><li class=active><a href=/blog>Blog</a></li><li class=""><a href=/projects>Projects</a></li><li class=""><a href=/about>About</a></li><!--<li class=""><a href="/memory">Memory</a></li>--></ul></div><a class=home-btn href="/"><i class=ion-ios-home></i></a></div></nav></div><header class=generic-header><div class=content-wrapper><h1>My insights for responsive design</h1></div><div class="spacing has-border"></div></header><section><div class=copy-wrapper><h2>Mobile/desktop first is not a big deal</h2><p>Currently popular tactic is to design content to fit small screen size first, and then expand the screen until a breakpoint becomes necessary. Some designers changed their workflow to follow this theory, but quite a few experienced designers still create initial design on large screen.</p><p>Sure, starting on small screen (a single tube of content) can help you to make decisions about what is most important on the page. On other hand, big screen gives you better control for overall look and feel (styling).</p><p>It depends on what you are after. If you comfortable with starting on large screen, you are still on the right track.</p><hr><h2>Make design looks right in 4 types of screen</h2><p>I believe all kinds of screens can fall into 5 categories. Most of time, responsive design is about to find best layout for first 4 types of screens:</p><ol class=has-number><li><b>Extra large screen</b> &gt; 1200px</li><li><b>Large screen</b> 900px – 1200px</li><li><b>Medium screen</b> 600px – 900px</li><li><b>Small screen</b> 300px – 600px</li><li><b>Tiny screen</b> &lt; 300px</li></ol><img src=/img/blogs/web/screen-size.af6d.jpg><p>I usually start Photoshop mockup on 1500px width then review my design on large, medium and small screen to make adjustment. Except client specified, I normally don’t take tiny screen into my consideration.</p><hr><h2>Responsive typography is key</h2><p>Responsive design is not simply scaling images to fit different size of screens. The heading and body font size also need to be adjusted. Best font size is determined by many elements: font type, layout, screen size and the distance from your eyes to screen. There is a really nice insight about <a href=Https://ia.net/know-how/responsive-typography-the-basics target=_blank>responsive typography</a>.</p><p>My favorite settings</p><p><b>Above large screen</b> (large screen + extra large screen)</p><ul class=has-bullet><li>H2 = 2.625 em / 42 px</li><li>Body font size = 1.125 em /18px</li></ul><p><b>Small screen</b></p><ul class=has-bullet><li>H2 = 2 em /36 px</li><li>Body = 1.25 em / 20px</li></ul><hr><h2>Some recipes</h2><p>When implementing design to CSS and HTML, I prefer to use CSS extended language, SASS for instance. I also use <a href="http://neat.bourbon.io/" target=_blank>NEAT</a> (a mixins library build on <a href="http://bourbon.io/" target=_blank>bourbon</a>) to make my code more readable.</p><p><b>SASS/SCSS</b></p><div class=highlight><pre><code class=language-scss data-lang=scss><span class=c1>// define screen size</span>
+        ga('send', 'pageview');</script></head><body class=blog itemscope itemtype=http://schema.org/WebPage><div class=nav-wrapper><nav><div class=content-wrapper><button id=navicon-button class=navicon-button><i class=ion-ios-more></i></button><div class=transform-mask><ul><li class=active><a href=/blog>Blog</a></li><li class=""><a href=/projects>Projects</a></li><li class=""><a href=/about>About</a></li><!--<li class=""><a href="/memory">Memory</a></li>--></ul></div><a class=home-btn href="/"><i class=ion-ios-home></i></a></div></nav></div><header class=generic-header><div class=content-wrapper><h1>My insights for responsive design</h1></div><div class="spacing has-border"></div></header><section><div class=copy-wrapper><h2>Mobile/desktop first is not a big deal</h2><p>The popular tactic is to design content to fit small screen size first, and then expand the screen until a breakpoint becomes necessary. Some designers changed their workflow to follow this theory, but quite a few experienced designers still prefer to create initial design on large screen.</p><p>Sure, starting on small screen (a single tube of content) can help you to make decisions about what is most important on the page. On other hand, big screen gives you better control for overall look and feel (styling).</p><p>It depends on what you are after. If you comfortable with starting on large screen, you are still on the right track.</p><hr><h2>Make design looks right in 4 types of screen</h2><p>I believe all kinds of screens can fall into 5 categories. Most of time, responsive design is about to find best layout for first 4 types of screens:</p><ol class=has-number><li><b>Extra large screen</b> &gt; 1200px</li><li><b>Large screen</b> 900px – 1200px</li><li><b>Medium screen</b> 600px – 900px</li><li><b>Small screen</b> 300px – 600px</li><li><b>Tiny screen</b> &lt; 300px</li></ol><img src=/img/blogs/web/screen-size.af6d.jpg><p>I usually start Photoshop mockup on 1500px width then review my design on large, medium and small screen to make adjustment. Except client specified, I normally don’t take tiny screen into my consideration.</p><hr><h2>Responsive typography is key</h2><p>Responsive design is not simply scaling/collapsing content to fit different size of screens. The heading and body font size also need to be adjusted. Best font size is determined by many elements: font type, layout, screen size and the distance from your eyes to screen. There is a really nice insight about <a href=Https://ia.net/know-how/responsive-typography-the-basics target=_blank>responsive typography</a>.</p><p>My favorite settings</p><p><b>Above large screen</b> (large screen + extra large screen)</p><ul class=has-bullet><li>H2 = 2.625 em / 42 px</li><li>Body font size = 1.125 em /18px</li></ul><p><b>Small screen</b></p><ul class=has-bullet><li>H2 = 2 em /36 px</li><li>Body = 1.25 em / 20px</li></ul><hr><h2>Some recipes</h2><p>When implementing design to CSS and HTML, I prefer to use CSS extended language, SASS for instance. I also use <a href="http://neat.bourbon.io/" target=_blank>NEAT</a> (a mixins library build on <a href="http://bourbon.io/" target=_blank>bourbon</a>) to make my code more readable.</p><p><b>SASS/SCSS</b></p><div class=highlight><pre><code class=language-scss data-lang=scss><span class=c1>// define screen size</span>
 <span class=nv>$medium-screen-min-width</span><span class=o>:</span> <span class=mi>601</span><span class=kt>px</span><span class=p>;</span>
 <span class=nv>$medium-screen-max-width</span><span class=o>:</span> <span class=mi>900</span><span class=kt>px</span><span class=p>;</span>
 
@@ -21,11 +21,126 @@
   <span class=c>/*</span>
 <span class=c>    styling …</span>
 <span class=c>  */</span>
-<span class=p>}</span></code></pre></div><h3>5 types of screen</h3><p data-height=268 data-theme-id=0 data-slug-hash=YwGMEw data-default-tab=result data-user=HarryWang74 class=codepen>See the Pen <a href="http://codepen.io/HarryWang74/pen/YwGMEw/">5 types of screen</a> by Harry74323 (<a href=http://codepen.io/HarryWang74>@HarryWang74</a>) on <a href=http://codepen.io>CodePen</a>.</p><script async src=//assets.codepen.io/assets/embed/ei.js></script></div><div temtype=comment class=copy-wrapper><hr><div id=disqus_thread></div><script type=text/javascript>var disqus_identifier = "/blog/2015/12/28/responsive-design-insight.html";
+<span class=p>}</span></code></pre></div><h3>Define 5 types of screen</h3><div class=highlight><pre><code class=language-scss data-lang=scss><span class=k>@import</span> <span class=s2>&quot;bourbon&quot;</span><span class=p>;</span>
+<span class=k>@import</span> <span class=s2>&quot;neat&quot;</span><span class=p>;</span> 
+
+<span class=c1>/// screen size</span>
+
+<span class=c1>// tiny screen &lt; 300</span>
+<span class=nv>$tiny-screen-max-width</span><span class=o>:</span> <span class=mi>299</span><span class=kt>px</span><span class=p>;</span>
+
+<span class=c1>// 300 &lt; smallScreen &lt; 600</span>
+<span class=nv>$small-screen-min-width</span><span class=o>:</span> <span class=mi>300</span><span class=kt>px</span><span class=p>;</span>
+<span class=nv>$small-screen-max-width</span><span class=o>:</span> <span class=mi>600</span><span class=kt>px</span><span class=p>;</span>
+
+<span class=c1>// 600 &lt; mediumScreen &lt; 900</span>
+<span class=nv>$medium-screen-min-width</span><span class=o>:</span> <span class=mi>601</span><span class=kt>px</span><span class=p>;</span>
+<span class=nv>$medium-screen-max-width</span><span class=o>:</span> <span class=mi>900</span><span class=kt>px</span><span class=p>;</span>
+
+<span class=c1>// 900 &lt; largeScreen &lt; 1200</span>
+<span class=nv>$large-screen-min-width</span><span class=o>:</span> <span class=mi>901</span><span class=kt>px</span><span class=p>;</span>
+<span class=nv>$large-screen-max-width</span><span class=o>:</span> <span class=mi>1200</span><span class=kt>px</span><span class=p>;</span>
+
+<span class=c1>// extraLargeScreen 1200 +</span>
+<span class=nv>$extra-large-screen-min-width</span><span class=o>:</span> <span class=mi>1201</span><span class=kt>px</span><span class=p>;</span>
+
+
+<span class=c1>/// breakpoints</span>
+
+<span class=c1>// tiny screen </span>
+<span class=nv>$tiny-screen</span><span class=o>:</span> <span class=nf>new-breakpoint</span><span class=p>(</span>
+  <span class=no>max-width</span> <span class=nv>$tiny-screen-max-width</span>
+<span class=p>);</span>
+
+<span class=c1>// smallScreen</span>
+<span class=nv>$small-screen</span><span class=o>:</span> <span class=nf>new-breakpoint</span><span class=p>(</span>
+  <span class=no>min-width</span> <span class=nv>$small-screen-min-width</span> 
+  <span class=no>max-width</span> <span class=nv>$small-screen-max-width</span>
+<span class=p>);</span>
+
+<span class=nv>$small-screen-up</span><span class=o>:</span> <span class=nf>new-breakpoint</span><span class=p>(</span>
+  <span class=no>min-width</span> <span class=nv>$medium-screen-min-width</span>
+<span class=p>);</span> 
+
+<span class=c1>//mediumScreen</span>
+<span class=nv>$medium-screen</span><span class=o>:</span> <span class=nf>new-breakpoint</span><span class=p>(</span>
+  <span class=no>min-width</span> <span class=nv>$medium-screen-min-width</span> 
+  <span class=no>max-width</span> <span class=nv>$medium-screen-max-width</span>
+<span class=p>);</span>
+<span class=nv>$medium-screen-up</span><span class=o>:</span> <span class=nf>new-breakpoint</span><span class=p>(</span>
+  <span class=no>min-width</span> <span class=nv>$large-screen-min-width</span>
+<span class=p>);</span>
+<span class=nv>$medium-screen-down</span><span class=o>:</span> <span class=nf>new-breakpoint</span><span class=p>(</span>
+  <span class=no>max-width</span> <span class=nv>$small-screen-max-width</span>
+<span class=p>);</span>
+
+<span class=c1>//largeScreen</span>
+<span class=nv>$large-screen</span><span class=o>:</span> <span class=nf>new-breakpoint</span><span class=p>(</span>
+  <span class=no>min-width</span> <span class=nv>$large-screen-min-width</span> 
+  <span class=no>max-width</span> <span class=nv>$large-screen-max-width</span>
+<span class=p>);</span>
+<span class=nv>$large-screen-down</span><span class=o>:</span> <span class=nf>new-breakpoint</span><span class=p>(</span>
+  <span class=no>max-width</span> <span class=nv>$medium-screen-max-width</span>
+<span class=p>);</span>
+
+<span class=c1>//extraLargeScreen</span>
+<span class=nv>$extra-large-screen</span><span class=o>:</span> <span class=nf>new-breakpoint</span><span class=p>(</span>
+  <span class=no>min-width</span> <span class=nv>$extra-large-screen-min-width</span>
+<span class=p>);</span>
+<span class=nv>$extra-large-screen-down</span><span class=o>:</span> <span class=nf>new-breakpoint</span><span class=p>(</span>
+  <span class=no>max-width</span> <span class=nv>$large-screen-max-width</span>
+<span class=p>);</span>
+
+
+<span class=c1>/// styling</span>
+
+<span class=k>@include</span><span class=nd> media</span><span class=p>(</span><span class=nv>$tiny-screen</span><span class=p>){</span> 
+
+<span class=p>}</span>
+<span class=k>@include</span><span class=nd> media</span><span class=p>(</span><span class=nv>$small-screen</span><span class=p>){</span>
+
+<span class=p>}</span>
+
+<span class=c1>// medium + large + extra large</span>
+<span class=k>@include</span><span class=nd> media</span><span class=p>(</span><span class=nv>$small-screen-up</span><span class=p>){</span>
+
+<span class=p>}</span>
+
+<span class=k>@include</span><span class=nd> media</span><span class=p>(</span><span class=nv>$medium-screen</span><span class=p>){</span>
+
+<span class=p>}</span>
+
+<span class=c1>// large + extra large</span>
+<span class=k>@include</span><span class=nd> media</span><span class=p>(</span><span class=nv>$medium-screen-up</span><span class=p>){</span>
+
+<span class=p>}</span>
+
+<span class=c1>// tiny + small</span>
+<span class=k>@include</span><span class=nd> media</span><span class=p>(</span><span class=nv>$medium-screen-down</span><span class=p>){</span>
+
+<span class=p>}</span>
+
+<span class=k>@include</span><span class=nd> media</span><span class=p>(</span><span class=nv>$large-screen</span><span class=p>){</span>
+
+<span class=p>}</span>
+
+<span class=c1>// medium + small + tiny</span>
+<span class=k>@include</span><span class=nd> media</span><span class=p>(</span><span class=nv>$large-screen-down</span><span class=p>){</span>
+
+<span class=p>}</span>
+
+<span class=k>@include</span><span class=nd> media</span><span class=p>(</span><span class=nv>$extra-large-screen</span><span class=p>){</span>
+
+<span class=p>}</span>
+
+<span class=c1>// large + medium + small + tiny</span>
+<span class=k>@include</span><span class=nd> media</span><span class=p>(</span><span class=nv>$extra-large-screen-down</span><span class=p>){</span>
+
+<span class=p>}</span></code></pre></div></div><div temtype=comment class=copy-wrapper><hr><div id=disqus_thread></div><script type=text/javascript>var disqus_identifier = "/blog/2015/12/28/responsive-design-insight.html";
 
   /* * * DON'T EDIT BELOW THIS LINE * * */
   (function() {
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
     dsq.src = '//gangwangcom' + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href=http://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></section><footer><div class=content-wrapper><div class=detail><h2>Get in touch</h2><p>If you want to know more about me or my work, feel free to get in touch</p><p><a href=mailto:me@anydomainname.com><i class=ion-ios-email-outline></i>harry74323@gmail.com</a></p></div><div class=social-icons><a href=https://github.com/HarryWang74 target=_blank><i class=ion-social-github></i></a> <a href="http://codepen.io/HarryWang74/" target=_blank><i class=ion-social-codepen-outline></i></a> <a href=https://www.linkedin.com/in/harry74323 target=_blank><i class=ion-social-linkedin></i></a></div></div><div class=copy-right><div class=copy-right-wrapper><div class=disclaimer><p>&copy; All rights reserved. Built with Jekyll, Bourbon, Neat, SASS &amp; Grunt. View <a href=https://github.com/HarryWang74/HarryWang74.github.io target=_blank><b>source</b></a></p></div></div></div><a id=to-top class="hidden-xs hidden-sm" style=bottom:-30px><i class=ion-chevron-up></i></a></footer></body><!-- CDN --><script src=https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js></script><!-- Packaged JS --><script src=/js/application.6f50.js></script></html>
+  })();</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href=http://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></section><footer><div class=content-wrapper><div class=detail><h2>Get in touch</h2><p>If you want to know more about me or my work, feel free to get in touch</p><p><a href=mailto:me@harry74323@gmail.com><i class=ion-ios-email-outline></i>harry74323@gmail.com</a></p></div><div class=social-icons><a href=https://github.com/HarryWang74 target=_blank><i class=ion-social-github></i></a> <a href="http://codepen.io/HarryWang74/" target=_blank><i class=ion-social-codepen-outline></i></a> <a href=https://www.linkedin.com/in/harry74323 target=_blank><i class=ion-social-linkedin></i></a></div></div><div class=copy-right><div class=copy-right-wrapper><div class=disclaimer><p>&copy; All rights reserved. Built with Jekyll, Bourbon, Neat, SASS &amp; Grunt.</p></div></div></div><a id=to-top class="hidden-xs hidden-sm" style=bottom:-30px><i class=ion-chevron-up></i></a></footer></body><!-- CDN --><script src=https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js></script><!-- Packaged JS --><script src=/js/application.6f50.js></script></html>
